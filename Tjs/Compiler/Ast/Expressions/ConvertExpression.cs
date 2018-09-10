@@ -31,7 +31,7 @@ namespace IronTjs.Compiler.Ast
 					type = typeof(string);
 					break;
 			}
-			return System.Linq.Expressions.Expression.Convert(IronTjs.Runtime.Binding.Binders.Convert(LanguageContext, Operand.TransformRead(), type), typeof(object));
+			return System.Linq.Expressions.Expression.Convert(Runtime.Binding.Binders.Convert(LanguageContext, Operand.TransformRead(), type), typeof(object));
 		}
 
 		public override System.Linq.Expressions.Expression TransformVoid() { return Operand.TransformVoid(); }

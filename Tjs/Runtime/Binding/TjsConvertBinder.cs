@@ -44,7 +44,7 @@ namespace IronTjs.Runtime.Binding
 				return InSuccess(Expression.Convert(expression, toType), succeeded);
 			else if (toType == expression.Type)
 				return InSuccess(expression, succeeded);
-			else if (expression.Type == typeof(IronTjs.Builtins.Void))
+			else if (expression.Type == typeof(Builtins.Void))
 			{
 				if (toType == typeof(string))
 					return InSuccess(Expression.Constant(string.Empty), succeeded);
@@ -116,7 +116,7 @@ namespace IronTjs.Runtime.Binding
 				else if (expression.Type.IsGenericType && expression.Type.GetGenericTypeDefinition() == typeof(Nullable<>))
 					exp = Expression.Property(expression, "HasValue");
 				else
-					return InSuccess(nonNullable == toType ? Expression.Constant(true) : Expression.Constant(new Nullable<bool>(true)), succeeded);
+					return InSuccess(nonNullable == toType ? Expression.Constant(true) : Expression.Constant(new bool?(true)), succeeded);
 				return InSuccess(NewNullableOrThrough(exp, toType, nonNullable), succeeded);
 			}
 			return null;

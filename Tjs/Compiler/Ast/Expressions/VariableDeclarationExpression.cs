@@ -34,7 +34,7 @@ namespace IronTjs.Compiler.Ast
 				if (initializer.Value != null)
 					exp = resolver.DeclareVariable(initializer.Key, initializer.Value.TransformRead());
 				else
-					exp = resolver.DeclareVariable(initializer.Key, System.Linq.Expressions.Expression.Constant(IronTjs.Builtins.Void.Value));
+					exp = resolver.DeclareVariable(initializer.Key, System.Linq.Expressions.Expression.Constant(Builtins.Void.Value));
 				if (exp == null)
 					throw new InvalidOperationException(string.Format("スコープに変数 \"{0}\" を宣言できません。", initializer.Key));
 				exps.Add(exp);

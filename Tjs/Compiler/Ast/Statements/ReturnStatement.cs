@@ -13,7 +13,7 @@
 
 		public override System.Linq.Expressions.Expression Transform()
 		{
-			var exp = Expression != null ? Expression.TransformRead() : System.Linq.Expressions.Expression.Constant(IronTjs.Builtins.Void.Value);
+			var exp = Expression != null ? Expression.TransformRead() : System.Linq.Expressions.Expression.Constant(Builtins.Void.Value);
 			var node = Parent;
 			FunctionDefinition function = null;
 			while ((function = node as FunctionDefinition) == null)

@@ -34,7 +34,7 @@ sealed class TjsConsoleHost : ConsoleHost
 			else if (args.Length <= 1)
 				ConsoleIO.WriteLine(string.Concat(args[0]), Style.Out);
 			else if (args[0] != null)
-				ConsoleIO.WriteLine(string.Format(args[0].ToString(), Microsoft.Scripting.Utils.ArrayUtils.RemoveFirst(args)), Style.Out);
+				ConsoleIO.WriteLine(string.Format(args[0].ToString(), ArrayUtils.RemoveFirst(args)), Style.Out);
 			return IronTjs.Builtins.Void.Value;
 		}, null, null));
 		scope.SetVariable("scan", new Function((global, context, args) =>

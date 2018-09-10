@@ -22,7 +22,7 @@ namespace IronTjs.Compiler.Ast
 
 		public FunctionDefinition Setter { get; private set; }
 
-		public System.Linq.Expressions.Expression TransformProperty(System.Linq.Expressions.Expression context)
+		public MSAst.Expression TransformProperty(MSAst.Expression context)
 		{
 			MSAst.Expression getter;
 			if (Getter != null)
@@ -42,7 +42,7 @@ namespace IronTjs.Compiler.Ast
 			);
 		}
 
-		public System.Linq.Expressions.Expression Register(System.Linq.Expressions.Expression registeredTo)
+		public MSAst.Expression Register(MSAst.Expression registeredTo)
 		{
 			return MSAst.Expression.Dynamic(LanguageContext.CreateSetMemberBinder(Name, false, true, true), typeof(object), registeredTo, TransformProperty(registeredTo));
 		}

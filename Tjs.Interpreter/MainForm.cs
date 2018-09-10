@@ -18,13 +18,13 @@ namespace IronTjs
 			InitializeLanguageContext();
 		}
 
-		IronTjs.Runtime.TjsContext context;
+        TjsContext context;
 		string savedFileName = null;
 
 		void InitializeLanguageContext()
 		{
 			var options = new Dictionary<string, object>();
-			context = new Runtime.TjsContext(
+			context = new TjsContext(
 				new Microsoft.Scripting.Runtime.ScriptDomainManager(
 					new DefaultHostingProvider(),
 					new Microsoft.Scripting.Runtime.DlrConfiguration(false, false, options)
@@ -73,7 +73,7 @@ namespace IronTjs
 
 			public IEnumerable<HighlightToken> GetTokens(string text)
 			{
-				IronTjs.Compiler.Tokenizer tokenizer = new Compiler.Tokenizer();
+                Tokenizer tokenizer = new Tokenizer();
 				int end = 0;
 				tokenizer.ErrorSink = Microsoft.Scripting.ErrorSink.Null;
 				tokenizer.Initialize(null, new StringReader(text), null, Microsoft.Scripting.SourceLocation.MinValue);
@@ -191,7 +191,7 @@ namespace IronTjs
 			using (OpenFileDialog dialog = new OpenFileDialog())
 			{
 				dialog.Filter = "TJSソースコード|*.tjs";
-				if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+				if (dialog.ShowDialog() == DialogResult.OK)
 					OpenFile(dialog.FileName);
 			}
 		}
@@ -209,7 +209,7 @@ namespace IronTjs
 			using (SaveFileDialog dialog = new SaveFileDialog())
 			{
 				dialog.Filter = "TJSソースコード|*.tjs";
-				if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+				if (dialog.ShowDialog() == DialogResult.OK)
 				{
 					File.WriteAllText(dialog.FileName, rtbSource.Text, Encoding.UTF8);
 					savedFileName = dialog.FileName;
@@ -253,7 +253,7 @@ namespace IronTjs
 
 		void InitializeStorage(dynamic storage)
 		{
-			storage.print = new Function((global, context, args) =>
+			storage.print = new Function((global, ctx, args) =>
 			{
 				if (args.Length <= 0)
 					MessageBox.Show(string.Empty);
@@ -261,9 +261,9 @@ namespace IronTjs
 					MessageBox.Show(string.Concat(args[0]));
 				else if (args[0] != null)
 					MessageBox.Show(string.Format(args[0].ToString(), Microsoft.Scripting.Utils.ArrayUtils.RemoveFirst(args)));
-				return IronTjs.Builtins.Void.Value;
+				return Builtins.Void.Value;
 			}, null, null);
-			storage.scan = new Function((global, context, args) =>
+			storage.scan = new Function((global, ctx, args) =>
 			{
 				using (InputBox box = new InputBox())
 				{
@@ -273,10 +273,10 @@ namespace IronTjs
 					return box.InputText;
 				}
 			}, null, null);
-			storage.Array = Microsoft.Scripting.Actions.MemberTracker.FromMemberInfo(typeof(IronTjs.Builtins.Array));
-			storage.Dictionary = IronTjs.Builtins.Dictionary.GetClass();
+			storage.Array = Microsoft.Scripting.Actions.MemberTracker.FromMemberInfo(typeof(Builtins.Array));
+			storage.Dictionary = Builtins.Dictionary.GetClass();
 			storage.Exception = Microsoft.Scripting.Actions.MemberTracker.FromMemberInfo(typeof(Exception));
-			storage.Math = Microsoft.Scripting.Actions.MemberTracker.FromMemberInfo(typeof(IronTjs.Builtins.Math));
+			storage.Math = Microsoft.Scripting.Actions.MemberTracker.FromMemberInfo(typeof(Builtins.Math));
 		}
 
 		void lvParseResults_DoubleClick(object sender, EventArgs e)

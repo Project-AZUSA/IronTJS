@@ -61,7 +61,7 @@ namespace IronTjs.Runtime.Binding
 				case TjsOperationKind.TypeOf:
 					if (target.RuntimeType == null)
 						exp = Expression.Constant("Object");
-					else if (target.RuntimeType == typeof(IronTjs.Builtins.Void))
+					else if (target.RuntimeType == typeof(Builtins.Void))
 						exp = Expression.Constant("void");
 					else if (target.RuntimeType == typeof(string))
 						exp = Expression.Constant("String");

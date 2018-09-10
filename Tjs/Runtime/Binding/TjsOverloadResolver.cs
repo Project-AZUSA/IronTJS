@@ -12,7 +12,7 @@ namespace IronTjs.Runtime.Binding
 
 		readonly TjsBinder _binder;
 
-		public override DefaultOverloadResolver CreateOverloadResolver(IList<DynamicMetaObject> args, CallSignature signature, CallTypes callType) { return new TjsOverloadResolver(_binder, args, signature, callType); }
+		public override DefaultOverloadResolver CreateOverloadResolver(IList<DynamicMetaObject> args, CallSignature signature, CallTypes callType) => new TjsOverloadResolver(_binder, args, signature, callType);
 	}
 
 	public sealed class TjsOverloadResolver : DefaultOverloadResolver

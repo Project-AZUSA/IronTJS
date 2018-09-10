@@ -18,17 +18,17 @@ namespace IronTjs.Runtime.Binding
 		{
 			if (type == typeof(string))
 			{
-				var method = typeof(IronTjs.Builtins.String).GetMethod(name);
+				var method = typeof(Builtins.String).GetMethod(name);
 				if (method != null)
 					return new MemberGroup(MemberTracker.FromMemberInfo(method, typeof(string)));
-				var property = typeof(IronTjs.Builtins.String).GetField(name + "Property");
+				var property = typeof(Builtins.String).GetField(name + "Property");
 				if (property != null && property.FieldType == typeof(ExtensionPropertyTracker))
 					return new MemberGroup((ExtensionPropertyTracker)property.GetValue(null));
 				return MemberGroup.EmptyGroup;
 			}
 			else if (type.IsSubclassOf(typeof(Exception)))
 			{
-				var property = typeof(IronTjs.Builtins.Exception).GetField(name + "Property");
+				var property = typeof(Builtins.Exception).GetField(name + "Property");
 				if (property != null && property.FieldType == typeof(ExtensionPropertyTracker))
 					return new MemberGroup((ExtensionPropertyTracker)property.GetValue(null));
 			}
@@ -40,7 +40,7 @@ namespace IronTjs.Runtime.Binding
 		internal static object ConvertInternal(object obj, Type toType)
 		{
 			Type fromType;
-			if (obj == null || (fromType = obj.GetType()) == typeof(IronTjs.Builtins.Void))
+			if (obj == null || (fromType = obj.GetType()) == typeof(Builtins.Void))
 			{
 				if (toType == typeof(string))
 					return obj == null ? "null" : string.Empty;
@@ -96,7 +96,7 @@ namespace IronTjs.Runtime.Binding
 				if (nonNullableTo == toType)
 					return converted;
 				else
-					return new Nullable<bool>((bool)converted);
+					return new bool?((bool)converted);
 			}
 			return NoValue;
 		}
@@ -118,7 +118,7 @@ namespace IronTjs.Runtime.Binding
 		{
 			var nonNullable = Binders.GetNonNullableType(toType);
 			return toType.IsAssignableFrom(fromType) ||
-				fromType == typeof(IronTjs.Builtins.Void) ||
+				fromType == typeof(Builtins.Void) ||
 				toType == typeof(object) ||
 				toType == typeof(string) ||
 				nonNullable == typeof(bool) ||
@@ -282,13 +282,13 @@ namespace IronTjs.Runtime.Binding
 			readonly List<ParameterExpression> _variables = new List<ParameterExpression>();
 			Expression _body;
 
-			/// <summary>新しい条件式と本体を追加します。最初の呼び出しは最上位の条件式に、後続の呼び出しは以前の条件式の false 文として追加されます。</summary>
-			/// <param name="condition"><see cref="System.Boolean"/> 型の結果型をもつ条件式を指定します。</param>
-			/// <param name="body"><paramref name="condition"/> が真の場合に実行される式を指定します。</param>
-			public void AddCondition(Expression condition, Expression body)
+            /// <summary>新しい条件式と本体を追加します。最初の呼び出しは最上位の条件式に、後続の呼び出しは以前の条件式の false 文として追加されます。</summary>
+            /// <param name="condition"><see cref="bool"/> 型の結果型をもつ条件式を指定します。</param>
+            /// <param name="body"><paramref name="condition"/> が真の場合に実行される式を指定します。</param>
+            public void AddCondition(Expression condition, Expression body)
 			{
 				Assert.NotNull(condition, body);
-				_tests.Add(Microsoft.Scripting.Ast.Utils.IfCondition(condition, body));
+				_tests.Add(AstUtils.IfCondition(condition, body));
 			}
 
 			/// <summary>先行するすべての条件が満たされない場合に実行される式を追加します。</summary>

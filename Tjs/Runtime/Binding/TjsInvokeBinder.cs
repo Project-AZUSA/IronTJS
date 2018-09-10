@@ -14,7 +14,7 @@ namespace IronTjs.Runtime.Binding
         readonly TjsContext _context;
 
         public CallSignature Signature { get; private set; }
-
+        
         public override DynamicMetaObject FallbackInvoke(DynamicMetaObject target, DynamicMetaObject[] args, DynamicMetaObject errorSuggestion)
         {
             return _context.Binder.Call(

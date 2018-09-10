@@ -12,7 +12,7 @@ namespace IronTjs.Compiler.Ast
 	{
 		public ClassDefinition(string name, IEnumerable<string> baseClasses, IEnumerable<ClassDefinition> classes, IEnumerable<FunctionDefinition> functions, IEnumerable<PropertyDefinition> properties, IEnumerable<VariableDeclarationExpression> variableDeclarations)
 		{
-			_context = System.Linq.Expressions.Expression.Parameter(typeof(object));
+			_context = MSAst.Parameter(typeof(object));
 			Name = name;
 			BaseClasses = baseClasses.ToReadOnly();
 			Classes = classes.ToReadOnly();
@@ -43,11 +43,11 @@ namespace IronTjs.Compiler.Ast
 
 		public ReadOnlyCollection<VariableDeclarationExpression> VariableDeclarations { get; private set; }
 
-		public System.Linq.Expressions.Expression Context { get { return _context; } }
+		public MSAst Context { get { return _context; } }
 
-		public System.Linq.Expressions.Expression GlobalContext { get { return GlobalParent.Context; } }
+		public MSAst GlobalContext { get { return GlobalParent.Context; } }
 
-		public System.Linq.Expressions.Expression TransformClass()
+		public MSAst TransformClass()
 		{
 			var defaultContext = MSAst.Constant(null);
 			var classFinders = new List<MSAst>();
@@ -84,7 +84,7 @@ namespace IronTjs.Compiler.Ast
 			return MSAst.New((System.Reflection.ConstructorInfo)Utils.GetMember(() => new Class(null, null, null, null)), MSAst.Constant(Name), MSAst.NewArrayInit(typeof(Func<Class>), classFinders), membersArg, fieldsArg);
 		}
 
-		public System.Linq.Expressions.Expression Register(System.Linq.Expressions.Expression registeredTo)
+		public MSAst Register(MSAst registeredTo)
 		{
 			return MSAst.Dynamic(
 				LanguageContext.CreateSetMemberBinder(Name, false, true, true),

@@ -39,11 +39,11 @@ namespace IronTjs.Compiler.Ast
 				else
 					throw new Microsoft.Scripting.SyntaxErrorException("引数の省略が使用されましたが、このコードを含む関数が見つかりません。");
 			}
-			else
-				return new Tuple<IEnumerable<System.Linq.Expressions.Expression>, CallSignature>(
-					Enumerable.Repeat(targetExp, 1).Concat(Arguments.Select(x => x.Transform())),
-					new CallSignature(Arguments.Select(x => x.IsSpread ? ArgumentType.List : ArgumentType.Simple).ToArray())
-				);
+
+		    return new Tuple<IEnumerable<System.Linq.Expressions.Expression>, CallSignature>(
+                Enumerable.Repeat(targetExp, 1).Concat(Arguments.Select(x => x.Transform())), //Why Repeat?
+                new CallSignature(Arguments.Select(x => x.IsSpread ? ArgumentType.List : ArgumentType.Simple).ToArray())
+		    );
 		}
 
 		public override System.Linq.Expressions.Expression TransformRead()

@@ -897,7 +897,7 @@ namespace IronTjs.Compiler
 			else if (Accept(TokenType.KeywordNull))
 				return null;
 			else if (Accept(TokenType.KeywordVoid))
-				return IronTjs.Builtins.Void.Value;
+				return Builtins.Void.Value;
 			else if (_tokenizer.NextToken.Type == TokenType.LiteralInteger)
 				return _tokenizer.Read().Value;
 			else if (_tokenizer.NextToken.Type == TokenType.LiteralReal)

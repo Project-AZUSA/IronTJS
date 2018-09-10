@@ -19,7 +19,7 @@ namespace IronTjs.Compiler.Ast
 		public override System.Linq.Expressions.Expression TransformRead()
 		{
 			return System.Linq.Expressions.Expression.New(
-				typeof(IronTjs.Builtins.Array).GetConstructor(new[] { typeof(IEnumerable<object>) }),
+				typeof(Builtins.Array).GetConstructor(new[] { typeof(IEnumerable<object>) }),
 				System.Linq.Expressions.Expression.NewArrayInit(typeof(object), Expressions.Select(x => x.TransformRead()))
 			);
 		}
