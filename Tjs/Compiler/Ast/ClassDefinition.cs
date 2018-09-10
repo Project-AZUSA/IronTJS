@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Runtime;
 using Microsoft.Scripting.Utils;
 using MSAst = System.Linq.Expressions.Expression;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class ClassDefinition : Node, IContextHolder
+    public class ClassDefinition : Node, IContextHolder
 	{
 		public ClassDefinition(string name, IEnumerable<string> baseClasses, IEnumerable<ClassDefinition> classes, IEnumerable<FunctionDefinition> functions, IEnumerable<PropertyDefinition> properties, IEnumerable<VariableDeclarationExpression> variableDeclarations)
 		{

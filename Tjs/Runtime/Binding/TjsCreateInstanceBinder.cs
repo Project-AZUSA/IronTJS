@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
 
 namespace IronTjs.Runtime.Binding
 {
-	class TjsCreateInstanceBinder : CreateInstanceBinder
+    class TjsCreateInstanceBinder : CreateInstanceBinder
 	{
 		public TjsCreateInstanceBinder(TjsContext context, CallInfo callInfo) : base(callInfo) { Context = context; }
 

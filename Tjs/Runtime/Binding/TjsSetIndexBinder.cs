@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Runtime.Binding
 {
-	class TjsSetIndexBinder : SetIndexBinder, IDirectAccessible
+    class TjsSetIndexBinder : SetIndexBinder, IDirectAccessible
 	{
 		public TjsSetIndexBinder(TjsContext context, CallInfo callInfo, bool direct) : base(callInfo)
 		{

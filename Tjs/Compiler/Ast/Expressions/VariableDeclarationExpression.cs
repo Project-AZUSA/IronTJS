@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Builtins;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class VariableDeclarationExpression : Expression
+    public class VariableDeclarationExpression : Expression
 	{
 		public VariableDeclarationExpression(IEnumerable<KeyValuePair<string, Expression>> initializers)
 		{

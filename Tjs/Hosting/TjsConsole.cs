@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Compiler;
 using Microsoft.Scripting.Hosting.Shell;
-using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Hosting
 {
-	public sealed class TjsConsole : BasicConsole
+    public sealed class TjsConsole : BasicConsole
 	{
 		struct Cursor
 		{

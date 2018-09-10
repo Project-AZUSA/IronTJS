@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Runtime.Binding
+﻿namespace IronTjs.Runtime.Binding
 {
-	public enum TjsOperationKind
+    public enum TjsOperationKind
 	{
 		// Unary
 		CharCodeToChar,

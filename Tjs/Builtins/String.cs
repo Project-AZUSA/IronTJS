@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Runtime.Binding;
 using Microsoft.Scripting.Actions;
 
 namespace IronTjs.Builtins
 {
-	public static class String
+    public static class String
 	{
 		enum SprintfFlag
 		{

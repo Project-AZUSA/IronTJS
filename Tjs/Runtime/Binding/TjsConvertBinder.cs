@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Builtins;
 using Microsoft.Scripting.Runtime;
 
 namespace IronTjs.Runtime.Binding
 {
-	class TjsConvertBinder : ConvertBinder
+    class TjsConvertBinder : ConvertBinder
 	{
 		public TjsConvertBinder(TjsContext context, Type type, bool @explicit) : base(type, @explicit) { _context = context; }
 

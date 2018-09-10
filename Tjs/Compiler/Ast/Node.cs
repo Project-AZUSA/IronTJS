@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Runtime;
+﻿using IronTjs.Runtime;
 
 namespace IronTjs.Compiler.Ast
 {
-	public abstract class Node
+    public abstract class Node
 	{
 		public Node Parent { get; internal set; }
 

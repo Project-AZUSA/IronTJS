@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class IfExpression : Expression
+    public class IfExpression : Expression
 	{
 		public IfExpression(Expression body, Expression condition)
 		{

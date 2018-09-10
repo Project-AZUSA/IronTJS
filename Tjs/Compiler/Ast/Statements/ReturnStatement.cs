@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Builtins;
-
-namespace IronTjs.Compiler.Ast
+﻿namespace IronTjs.Compiler.Ast
 {
-	public class ReturnStatement : Statement
+    public class ReturnStatement : Statement
 	{
 		public ReturnStatement(Expression expression)
 		{

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Runtime
 {
-	class UnnamedSpreadArguments : IList<object>
+    class UnnamedSpreadArguments : IList<object>
 	{
 		public UnnamedSpreadArguments(object[] arguments, int spreadStart)
 		{

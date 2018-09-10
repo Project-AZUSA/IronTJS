@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Runtime.Binding;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Compiler.Ast
 {
-	using Ast = System.Linq.Expressions.Expression;
+    using Ast = System.Linq.Expressions.Expression;
 
-	public class FunctionDefinition : Node, INameResolver, IContextHolder
+    public class FunctionDefinition : Node, INameResolver, IContextHolder
 	{
 		public FunctionDefinition(string name, IEnumerable<ParameterDefinition> parameters, IEnumerable<Statement> body)
 		{

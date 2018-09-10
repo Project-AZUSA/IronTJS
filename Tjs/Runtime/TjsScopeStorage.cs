@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Runtime.Binding;
 
 namespace IronTjs.Runtime
 {
-	public class TjsScopeStorage : DynamicStorage
+    public class TjsScopeStorage : DynamicStorage
 	{
 		public TjsScopeStorage() { }
 

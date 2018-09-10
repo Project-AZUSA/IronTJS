@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Compiler.Ast
+﻿namespace IronTjs.Compiler.Ast
 {
-	public class ConditionalExpression : Expression
+    public class ConditionalExpression : Expression
 	{
 		public ConditionalExpression(Expression condition, Expression ifTrue, Expression ifFalse)
 		{

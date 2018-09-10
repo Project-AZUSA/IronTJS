@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Runtime;
 
 namespace IronTjs.Compiler
 {
-	public class Tokenizer : TokenizerService
+    public class Tokenizer : TokenizerService
 	{
 		TextReader _reader;
 		SourceUnit _sourceUnit;

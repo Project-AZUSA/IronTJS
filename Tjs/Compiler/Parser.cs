@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Compiler.Ast;
-using IronTjs.Runtime.Binding;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Runtime;
-using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Compiler
 {
-	public class Parser
+    public class Parser
 	{
 		[Serializable]
 		class InternalInvalidSyntaxException : Exception { }

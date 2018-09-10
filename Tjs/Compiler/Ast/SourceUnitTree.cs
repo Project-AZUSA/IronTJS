@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Runtime;
-using IronTjs.Runtime.Binding;
 using Microsoft.Scripting.Runtime;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class SourceUnitTree : Node, INameResolver, IContextHolder
+    public class SourceUnitTree : Node, INameResolver, IContextHolder
 	{
 		public SourceUnitTree(IEnumerable<ClassDefinition> classes, IEnumerable<FunctionDefinition> functions, IEnumerable<PropertyDefinition> properties, IEnumerable<Statement> statements, CompilerContext context)
 		{

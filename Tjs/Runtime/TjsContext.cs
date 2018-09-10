@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Compiler;
 using IronTjs.Runtime.Binding;
 using Microsoft.Scripting;
@@ -14,7 +11,7 @@ using Microsoft.Scripting.Runtime;
 
 namespace IronTjs.Runtime
 {
-	public sealed class TjsContext : LanguageContext
+    public sealed class TjsContext : LanguageContext
 	{
 		public TjsContext(ScriptDomainManager manager, IDictionary<string, object> options) : base(manager)
 		{

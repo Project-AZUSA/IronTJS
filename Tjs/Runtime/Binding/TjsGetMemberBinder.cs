@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Dynamic;
 
 namespace IronTjs.Runtime.Binding
 {
-	using AstUtils = Microsoft.Scripting.Ast.Utils;
+    using AstUtils = Microsoft.Scripting.Ast.Utils;
 
-	class TjsGetMemberBinder : GetMemberBinder, IDirectAccessible
+    class TjsGetMemberBinder : GetMemberBinder, IDirectAccessible
 	{
 		public TjsGetMemberBinder(TjsContext context, string name, bool ignoreCase, bool direct) : base(name, ignoreCase)
 		{

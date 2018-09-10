@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Dynamic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using IronTjs.Runtime.Binding;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Runtime
 {
-	public class Class : DynamicStorage
+    public class Class : DynamicStorage
 	{
 		public Class(string name, IEnumerable<Func<Class>> baseClasses, IEnumerable<KeyValuePair<string, object>> members, IEnumerable<KeyValuePair<string, Func<object, object>>> fields)
 		{

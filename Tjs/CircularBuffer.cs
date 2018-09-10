@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs
 {
-	public class CircularBuffer<T> : IList<T>
+    public class CircularBuffer<T> : IList<T>
 	{
 		public CircularBuffer() : this(DefaultCapacity) { }
 

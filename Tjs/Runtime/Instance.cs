@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Runtime
 {
-	public class Instance : DynamicStorage
+    public class Instance : DynamicStorage
 	{
 		public Instance(Class type, params object[] args)
 		{

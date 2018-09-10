@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Runtime.Binding
 {
-	class TjsDeleteMemberBinder : DynamicMetaObjectBinder
+    class TjsDeleteMemberBinder : DynamicMetaObjectBinder
 	{
 		public TjsDeleteMemberBinder(TjsContext context, string name, bool ignoreCase)
 		{

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Dynamic;
 
 namespace IronTjs.Runtime.Binding
 {
-	using AstUtils = Microsoft.Scripting.Ast.Utils;
+    using AstUtils = Microsoft.Scripting.Ast.Utils;
 
-	class TjsSetMemberBinder : SetMemberBinder, IForceMemberCreatable, IDirectAccessible
+    class TjsSetMemberBinder : SetMemberBinder, IForceMemberCreatable, IDirectAccessible
 	{
 		public TjsSetMemberBinder(TjsContext context, string name, bool ignoreCase, bool forceCreate, bool direct) : base(name, ignoreCase)
 		{

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class NewDictionaryExpression : Expression
+    public class NewDictionaryExpression : Expression
 	{
 		public NewDictionaryExpression(IEnumerable<DictionaryInitializationEntry> entries)
 		{

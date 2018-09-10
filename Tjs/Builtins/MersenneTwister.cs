@@ -33,13 +33,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Builtins
 {
-	public class MersenneTwister : Random
+    public class MersenneTwister : Random
 	{
 		// Period parameters
 		const int StateVectorLength = 624;

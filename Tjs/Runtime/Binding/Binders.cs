@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Compiler;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Actions;
 
 namespace IronTjs.Runtime.Binding
 {
-	static class Binders
+    static class Binders
 	{
 		public static Expression Convert(this TjsContext context, Expression expression, Type toType) { return Expression.Dynamic(context.CreateConvertBinder(toType, true), toType, expression); }
 

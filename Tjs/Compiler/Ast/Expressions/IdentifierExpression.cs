@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Compiler.Ast
+﻿namespace IronTjs.Compiler.Ast
 {
-	public class IdentifierExpression : Expression
+    public class IdentifierExpression : Expression
 	{
 		public IdentifierExpression(string identifier) { Identifier = identifier; }
 

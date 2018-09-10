@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Runtime
 {
-	public class Property : IContextChangeable
+    public class Property : IContextChangeable
 	{
 		public Property(Func<object, object, object[], object> getter, Func<object, object, object[], object> setter, object global, object context)
 		{

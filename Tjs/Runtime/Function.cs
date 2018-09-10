@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
 
 namespace IronTjs.Runtime
 {
-	public class Function : IDynamicMetaObjectProvider, IContextChangeable
+    public class Function : IDynamicMetaObjectProvider, IContextChangeable
 	{
 		public Function(Func<object, object, object[], object> functionBody, object global, object context)
 		{

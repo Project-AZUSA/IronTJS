@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
 using Microsoft.Scripting.Utils;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class InvokeExpression : Expression
+    public class InvokeExpression : Expression
 	{
 		public InvokeExpression(Expression target, IEnumerable<InvocationArgument> arguments, bool inheritArguments)
 		{

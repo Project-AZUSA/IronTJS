@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
 using Microsoft.Scripting.Actions.Calls;
 using Microsoft.Scripting.Runtime;
 
 namespace IronTjs.Runtime.Binding
 {
-	sealed class TjsOverloadResolverFactory : OverloadResolverFactory
+    sealed class TjsOverloadResolverFactory : OverloadResolverFactory
 	{
 		public TjsOverloadResolverFactory(TjsBinder binder) { _binder = binder; }
 

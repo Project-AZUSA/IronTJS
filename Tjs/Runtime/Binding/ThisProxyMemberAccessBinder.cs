@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Runtime.Binding
 {
-	class ThisProxyMemberAccessBinder : DynamicMetaObjectBinder
+    class ThisProxyMemberAccessBinder : DynamicMetaObjectBinder
 	{
 		public ThisProxyMemberAccessBinder(TjsContext context, string name, bool ignoreCase, MemberAccessKind accessKind)
 		{

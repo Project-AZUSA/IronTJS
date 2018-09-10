@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs
 {
-	static class Utils
+    static class Utils
 	{
 		public static Type[] GetDelegateSignature(Type delegateType)
 		{

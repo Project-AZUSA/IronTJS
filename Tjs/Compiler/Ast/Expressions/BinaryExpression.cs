@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Runtime.Binding;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class BinaryExpression : Expression
+    public class BinaryExpression : Expression
 	{
 		public BinaryExpression(Expression left, Expression right, BinaryOperator expressionType)
 		{

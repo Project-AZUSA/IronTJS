@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace IronTjs.Compiler.Ast
 {
-	public class WhileStatement : Statement, ILoopStatement
+    public class WhileStatement : Statement, ILoopStatement
 	{
 		public WhileStatement(Expression condition, Statement body)
 		{

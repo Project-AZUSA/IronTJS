@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IronTjs.Compiler;
 using IronTjs.Runtime;
 using Microsoft.Scripting;
@@ -11,7 +8,7 @@ using Microsoft.Scripting.Hosting.Shell;
 
 namespace IronTjs.Hosting
 {
-	public class TjsCommandLine : CommandLine
+    public class TjsCommandLine : CommandLine
 	{
 		public TjsCommandLine(Action<ScriptScope> scopeInitializer) { _scopeInitializer = scopeInitializer; }
 

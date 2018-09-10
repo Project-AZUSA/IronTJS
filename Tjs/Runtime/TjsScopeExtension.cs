@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Runtime;
 
 namespace IronTjs.Runtime
 {
-	class TjsScopeExtension : ScopeExtension
+    class TjsScopeExtension : ScopeExtension
 	{
 		public TjsScopeExtension(Scope scope) : base(scope)
 		{

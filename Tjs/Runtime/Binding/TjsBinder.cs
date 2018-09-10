@@ -4,8 +4,6 @@ using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
 using Microsoft.Scripting.Actions.Calls;
 using Microsoft.Scripting.Runtime;
@@ -14,7 +12,7 @@ using AstUtils = Microsoft.Scripting.Ast.Utils;
 
 namespace IronTjs.Runtime.Binding
 {
-	public sealed class TjsBinder : DefaultBinder
+    public sealed class TjsBinder : DefaultBinder
 	{
 		public override MemberGroup GetMember(MemberRequestKind action, Type type, string name)
 		{
@@ -186,7 +184,7 @@ namespace IronTjs.Runtime.Binding
 				{
 					case TrackerTypes.TypeGroup:
 					case TrackerTypes.Type:
-						info.Body.FinishCondition(members.Cast<TypeTracker>().Aggregate((x, y) => TypeGroup.Merge(x, y)).GetValue(info.ResolutionFactory, this, type).Expression);
+						info.Body.FinishCondition(members.Cast<TypeTracker>().Aggregate(TypeGroup.UpdateTypeEntity).GetValue(info.ResolutionFactory, this, type).Expression);
 						break;
 					case TrackerTypes.Method:
 						// MethodGroup になる        

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Compiler.Ast
+﻿namespace IronTjs.Compiler.Ast
 {
-	struct OperationDistributionResult
+    struct OperationDistributionResult
 	{
 		public OperationDistributionResult(System.Linq.Expressions.ExpressionType type) : this()
 		{

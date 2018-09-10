@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Compiler.Ast
+﻿namespace IronTjs.Compiler.Ast
 {
-	/// <summary>
-	/// 変数宣言と識別子解決に関係する機能をカプセル化します。
-	/// このインターフェイスが実装されたノードに対して、var を使用して変数を宣言したり、特定の識別子がどの変数または引数にマッピングされるかを調べたりすることができます。
-	/// </summary>
-	public interface INameResolver
+    /// <summary>
+    /// 変数宣言と識別子解決に関係する機能をカプセル化します。
+    /// このインターフェイスが実装されたノードに対して、var を使用して変数を宣言したり、特定の識別子がどの変数または引数にマッピングされるかを調べたりすることができます。
+    /// </summary>
+    public interface INameResolver
 	{
 		/// <summary>指定された識別子に対する値の読み込みを行う式を取得します。読み込むことができない場合は <c>null</c> を返します。</summary>
 		/// <param name="name">値を読み込む識別子を指定します。</param>

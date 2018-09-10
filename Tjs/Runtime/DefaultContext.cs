@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Runtime
+﻿namespace IronTjs.Runtime
 {
-	public static class DefaultContext
+    public static class DefaultContext
 	{
 		static TjsContext _default;
 

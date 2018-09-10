@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Runtime.Binding
+﻿namespace IronTjs.Runtime.Binding
 {
-	public interface IForceMemberCreatable
+    public interface IForceMemberCreatable
 	{
 		bool ForceCreate { get; }
 	}

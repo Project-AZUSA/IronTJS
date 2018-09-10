@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
-using Microsoft.Scripting.Generation;
 using Microsoft.Scripting.Runtime;
 
 namespace IronTjs.Runtime.Binding
 {
-	class TjsOperationBinder : DynamicMetaObjectBinder
+    class TjsOperationBinder : DynamicMetaObjectBinder
 	{
 		public TjsOperationBinder(TjsContext context, TjsOperationKind operation)
 		{

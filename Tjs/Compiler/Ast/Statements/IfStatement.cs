@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IronTjs.Compiler.Ast
+﻿namespace IronTjs.Compiler.Ast
 {
-	public class IfStatement : Statement
+    public class IfStatement : Statement
 	{
 		public IfStatement(Expression condition, Statement ifTrue, Statement ifFalse)
 		{

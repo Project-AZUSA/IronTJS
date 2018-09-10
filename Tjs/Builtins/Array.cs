@@ -3,13 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Scripting.Actions;
 
 namespace IronTjs.Builtins
 {
-	public class Array : IList<object>
+    public class Array : IList<object>
 	{
 		public Array() { _buffer = new CircularBuffer<object>(); }
 

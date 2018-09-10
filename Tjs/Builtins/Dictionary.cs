@@ -2,12 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Builtins
 {
-	public class Dictionary : Runtime.DynamicStorage, IDictionary<string, object>, IDictionary
+    public class Dictionary : Runtime.DynamicStorage, IDictionary<string, object>, IDictionary
 	{
 		public Dictionary() { }
 

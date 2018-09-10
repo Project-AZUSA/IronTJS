@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IronTjs.Builtins
 {
-	public static class Math
+    public static class Math
 	{
 		static MersenneTwister _generator = new MersenneTwister();
 
