@@ -44,6 +44,7 @@
     <Compile Include="Builtins\Array.cs" />
     <Compile Include="Builtins\Math.cs" />
     <Compile Include="Builtins\MersenneTwister.cs" />
+    <Compile Include="Builtins\System.cs" />
     <Compile Include="CircularBuffer.cs" />
     <Compile Include="Builtins\Dictionary.cs" />
     <Compile Include="Builtins\Exception.cs" />

@@ -216,7 +216,7 @@ namespace IronTjs.Compiler
 				{
 					if (_columnIndex >= _line.Length)
 					{
-						AddError("文字列トークンが予期せず終了しました。", new SourceSpan(start, CurrentPosition), -1, Severity.Error);
+						//AddError("文字列トークンが予期せず終了しました。", new SourceSpan(start, CurrentPosition), -1, Severity.Error); //FIX: can not input "
 						return new Token(TokenType.Unknown, sb.ToString(), new SourceSpan(start, CurrentPosition));
 					}
 					else if (_line[_columnIndex] == quote)
