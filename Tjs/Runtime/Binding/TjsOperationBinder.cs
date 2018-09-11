@@ -55,6 +55,7 @@ namespace IronTjs.Runtime.Binding
 				case TjsOperationKind.Evaluate:
 				case TjsOperationKind.Invalidate:
 				case TjsOperationKind.IsValid:
+                    //MARK: not implemented?
 					if (errorSuggestion == null)
 						errorSuggestion = new DynamicMetaObject(Expression.Throw(Expression.Constant(new NotImplementedException())), BindingRestrictions.Empty);
 					break;
