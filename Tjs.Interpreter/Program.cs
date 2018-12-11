@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace IronTjs
+namespace IronTJS
 {
     static class Program
 	{

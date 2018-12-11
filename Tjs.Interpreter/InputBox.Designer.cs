@@ -1,4 +1,4 @@
-﻿namespace IronTjs
+﻿namespace IronTJS
 {
 	partial class InputBox
 	{

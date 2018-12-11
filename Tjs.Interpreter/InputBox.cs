@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace IronTjs
+namespace IronTJS
 {
     public partial class InputBox : Form
 	{

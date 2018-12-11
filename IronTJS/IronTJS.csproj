@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net46;netcoreapp2.1</TargetFrameworks>
+    <PackageId>IronTJS</PackageId>
+    <Authors>takumi &amp; Ulysses</Authors>
+    <Company>Project AZUSA</Company>
+    <Product>IronTJS</Product>
+    <PackageProjectUrl>https://github.com/Project-AZUSA/IronTJS</PackageProjectUrl>
+    <Description>FeTj</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DynamicLanguageRuntime" Version="1.2.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>

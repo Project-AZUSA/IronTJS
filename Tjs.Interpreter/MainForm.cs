@@ -5,10 +5,10 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using Controls;
-using IronTjs.Compiler;
-using IronTjs.Runtime;
+using IronTJS.Compiler;
+using IronTJS.Runtime;
 
-namespace IronTjs
+namespace IronTJS
 {
     public partial class MainForm : Form
 	{
